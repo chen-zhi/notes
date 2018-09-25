@@ -3,7 +3,8 @@ nav:
   All: /archives/
   React: /tags/react/
   JavaScript: /tags/JavaScript/
-#   Projects: http://github.com/gabithume
+  数据结构与算法: /tags/数据结构与算法/
+  #Projects: http://github.com/gabithume
 
 projects_url: https://github.com/chen-zhi
 
