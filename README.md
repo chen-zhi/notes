@@ -1,3 +1,6 @@
 Welcome to my study notes.
 
-Build with Hexo.
+Built with Hexo.
+
+Deployed on Netlify. URL: https://zhisnotes.netlify.com/
+
