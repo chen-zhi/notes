@@ -24,7 +24,18 @@ Never modify state outside of this.setState().
 ### setState() is Asynchronous
 
 ## Lifecycle Methods
-We can declare special methods on the component class to run some code when a component mounts and unmounts
-### componentDidMount()
+We can declare special methods on the component class to run some code when a component mounts, updates and unmounts.
 
-### componentWillUnmount()
+Use this [lifecycle diagram](http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/) as a cheat sheet.
+
+### Mounting
+* constructor()
+* render()
+* componentDidMount()
+
+### Updating
+* render()
+* componentDidUpdate()
+
+### Unmounting
+* omponentWillUnmount()
