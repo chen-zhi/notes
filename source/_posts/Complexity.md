@@ -3,7 +3,7 @@ title: 复杂度分析
 date: 2018-09-25 20:58:47
 tags: 数据结构与算法
 ---
-
+Efficiency  is also called complexity.
 ## 时间复杂度 Time Complexity
 ### 常见时间复杂度
 <img src="https://github.com/chen-zhi/notes/blob/master/img/time_complexity2.JPG?raw=true">
@@ -18,3 +18,9 @@ tags: 数据结构与算法
 <img src="https://github.com/chen-zhi/notes/blob/master/img/time_complexity1.JPG?raw=true">
 
 ## 空间复杂度 Space Complexity
+
+## Big O notation
+
+### Best case
+### Average case
+### Worst case
