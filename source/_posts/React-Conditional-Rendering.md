@@ -1,7 +1,7 @@
 ---
 title: React Conditional Rendering
 date: 2018-09-26 02:04:04
-tags: react
+tags: React
 ---
 
 ## if-else

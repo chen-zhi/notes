@@ -1,7 +1,7 @@
 ---
 title: Functional and Class Components
 date: 2018-09-25 12:34:05
-tags: react
+tags: React
 ---
 
 ## Functional(Stateless) Component

@@ -1,7 +1,7 @@
 ---
 title: Forms in React
 date: 2018-09-27 00:33:46
-tags: react
+tags: React
 ---
 
 ## In regular HTML

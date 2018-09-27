@@ -1,7 +1,7 @@
 ---
 title: State and Lifecycle
 date: 2018-09-25 19:06:27
-tags: react
+tags: React
 ---
 ## State
 A component needs state when some data associated with it changes over time.

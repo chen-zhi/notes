@@ -1,7 +1,7 @@
 ---
 title: Handling Events in React
 date: 2018-09-25 16:13:44
-tags: react
+tags: React
 ---
 ## Difference between DOM Events and React SyntheticEvents
 * HTML: onclick  React: onClick
