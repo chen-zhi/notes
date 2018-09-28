@@ -18,6 +18,10 @@ In JavaScript **each file is a module** and all objects defined in the file belo
 
 # Components
 **Every component must be declared in exactly one NgModule.**
+Using the Angular CLI, create a component called hello.
+```
+ng generate component hello
+```
 ## MVC/MVVM
 model-view-controller (MVC) or model-view-viewmodel (MVVM).
 In Angular, the component plays the part of the controller/viewmodel, and the template represents the view.
@@ -30,8 +34,8 @@ In Angular, the component plays the part of the controller/viewmodel, and the te
 <li (click)="selectHero(hero)"></li>
 ```
 * The &#123;&#123;hero.name&#125;&#125; interpolation displays the component's `hero.name` property value within the `<li>` element.
-* The `[hero]` property binding passes the value of selectedHero from the parent HeroListComponent to the hero property of the child HeroDetailComponent.
-* The `(click)` event binding calls the component's selectHero method when the user clicks a hero's name.
+* The `[hero]` **property binding** passes the value of selectedHero from the parent HeroListComponent to the hero property of the child HeroDetailComponent.
+* The `(click)` **event binding** calls the component's selectHero method when the user clicks a hero's name.
 
 ### Two way binding
 **[(ngModel)]** is Angular's two-way data binding syntax. Remember to import FormsModule in AppModule when using ngModel.
@@ -61,14 +65,40 @@ A component is technically a directive.
 ```
 `*ngFor` is an iterative; it tells Angular to stamp out one `<li>` per hero in the heroes list.
 `*ngIf` is a conditional; it includes the HeroDetail component only if a selected hero exists.
+`[ngSwitch]`
 ### Attribute directives
 ```
 <input [(ngModel)]="hero.name">
 ```
-* ngModel
-* ngSwitch
-* ngStyle and ngClass
+* **ngModel**
+* **ngStyle**
+* **ngClass**
+* **routerLink**: The routerLink is the selector for the RouterLink directive that turns user clicks into router navigations. It's another of the public directives in the RouterModule.
 
+#### ngClass
+syntax: `[class.some-css-class]="some-condition"`
+```
+[class.selected]="hero === selectedHero"
+```
 # Services and DI
-DI is wired into the Angular framework and used everywhere to provide new components with the services or other things they need. Components consume services; that is, **you can inject a service into a component, giving the component access to that service class**.
+DI is wired into the Angular framework and used everywhere to provide new components with the services or other things they need. Components consume services; that is, **you can inject a service into a component constructor, giving the component access to that service class**.
+Using the Angular CLI, create a service called hello.
+```
+ng generate service hello
+```
+## DI Design Pattern
+Dependency injection is basically providing the objects that an object needs (its dependencies) instead of having it construct them itself. It's a very useful technique for testing, since it allows dependencies to be mocked or stubbed out.
 
+Dependencies can be injected into objects by many means (such as constructor injection or setter injection). One can even use specialized dependency injection frameworks (e.g. Spring) to do that, but they certainly aren't required. You don't need those frameworks to have dependency injection. Instantiating and passing objects (dependencies) explicitly is just as good an injection as injection by framework.
+
+# Routing
+A typical Angular Route has two properties:
+1. **path**: a string that matches the URL in the browser address bar.
+2. **component**: the component that the router should create when navigating to this route.
+```
+import { HeroesComponent }      from './heroes/heroes.component';
+
+const routes: Routes = [
+  { path: 'heroes', component: HeroesComponent }
+];
+```

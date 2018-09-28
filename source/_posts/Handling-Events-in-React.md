@@ -43,6 +43,7 @@ ReactDOM.render(
 ```
 
 ### Using public class fields syntax (experimental)
+Click [here](http://2ality.com/2017/07/class-fields.html) to read more.
 ```
 class LoggingButton extends React.Component {
   // This syntax ensures `this` is bound within handleClick.
@@ -80,6 +81,53 @@ class LoggingButton extends React.Component {
     );
   }
 }
+```
+
+### With createReactClass()
+The React team has explained this in their docs [here](https://reactjs.org/docs/react-without-es6.html#autobinding).
+With `createReactClass()`, this is not necessary because it binds all methods. 
+```
+class SayHello extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {message: 'Hello!'};
+    // This line is important!
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick() {
+    alert(this.state.message);
+  }
+
+  render() {
+    // Because `this.handleClick` is bound, we can use it as an event handler.
+    return (
+      <button onClick={this.handleClick}>
+        Say hello
+      </button>
+    );
+  }
+}
+```
+The above code works the same as the following.
+```
+var SayHello = createReactClass({
+  getInitialState: function() {
+    return {message: 'Hello!'};
+  },
+
+  handleClick: function() {
+    alert(this.state.message);
+  },
+
+  render: function() {
+    return (
+      <button onClick={this.handleClick}>
+        Say hello
+      </button>
+    );
+  }
+});
 ```
 
 ## Understand this

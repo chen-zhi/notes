@@ -55,6 +55,8 @@ console.log(greeting); // Hi John, Doe
 * import
 * export
 
+CommonJS vs AMD vs RequireJS vs ES6 Modules
+NodeJS uses CommonJS module convention
 ## Class
 
 ### Class declaration
