@@ -61,6 +61,32 @@ class LoggingButton extends React.Component {
   }
 }
 ```
+With this syntax, 
+* We can use arrow functions for custom component methods (and avoid having to bind this)
+* We can define the initial state outside of constructor()
+
+```
+class App extends Component {
+  state = {counter: 0}
+
+  incrementCounter = () => {
+    this.setState(ps => {
+      return {counter: ps.counter + 1}
+    })
+  }
+
+  render() {
+    return (
+      <div>
+        <p>
+          <button onClick={this.incrementCounter}>Increment</button>
+        </p>
+        <h1>{this.state.counter}</h1>
+      </div>
+    )
+  }
+}
+```
 
 ### Using arrow function
 If this callback is passed as a prop to lower components, those components might do an extra re-rendering.
@@ -111,6 +137,7 @@ class SayHello extends React.Component {
 ```
 The above code works the same as the following.
 ```
+var createReactClass = require('create-react-class');
 var SayHello = createReactClass({
   getInitialState: function() {
     return {message: 'Hello!'};

@@ -5,10 +5,11 @@ tags: React
 ---
 ## State
 A component needs state when some data associated with it changes over time.
-In React components, state is an object. 
+In React components, **state is an object**. 
 
 ### Do Not Modify State Directly
-Never modify state outside of this.setState().
+Treat the this.state object as **immutable**.
+**Never** modify state outside of this.setState().
 
 #### Do not use array mutating methods
 * push(), pop()
