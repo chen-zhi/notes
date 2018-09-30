@@ -11,3 +11,6 @@ Problem:
 If we implement an input field as we always did in HTML, React will keep the render() in sync with the real DOM. React won’t allow users to change the value. Code example shows [here](https://codepen.io/chenzhi/pen/KGPpNE).
 ## Reference
 [How to Work with Forms, Inputs and Events in React](https://medium.com/capital-one-developers/how-to-work-with-forms-inputs-and-events-in-react-c337171b923b)
+
+## Formik
+Formik is recommended by React

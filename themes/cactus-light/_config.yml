@@ -1,9 +1,10 @@
 nav:
   Home: /
   All: /archives/
+  CSS: /tags/CSS/
+  JavaScript: /tags/JavaScript/
   React: /tags/React/
   Angular: /tags/Angular/
-  JavaScript: /tags/JavaScript/
   数据结构与算法: /tags/数据结构与算法/
   Others: /tags/Others/
   #Projects: http://github.com/gabithume

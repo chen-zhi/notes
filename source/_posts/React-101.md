@@ -59,6 +59,22 @@ React lets you define components as classes or functions.
 Read more in [Functional and Class Components](/2018/09/25/Functional-and-Class-Components/) blog.
 ## Props
 Probs are read-only.
+### PropTypes
+```
+import PropTypes from 'prop-types';
+
+class Greeting extends React.Component {
+  render() {
+    return (
+      <h1>Hello, {this.props.name}</h1>
+    );
+  }
+}
+
+Greeting.propTypes = {
+  name: PropTypes.string
+};
+```
 ### children
 You can put a string between the opening and closing tags and `props.children` will just be that string. This is useful for many of the built-in HTML elements. For example:
 ```
