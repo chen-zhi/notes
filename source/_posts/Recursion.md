@@ -1,7 +1,7 @@
 ---
 title: Recursion
 date: 2017-01-01 11:40:43
-tags: 数据结构与算法
+tags: Algorithm
 ---
 
 ## Java recursive Fibonacci sequence

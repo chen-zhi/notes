@@ -1,7 +1,7 @@
 ---
 title: 复杂度 Complexity
 date: 2018-09-25 20:58:47
-tags: 数据结构与算法
+tags: Algorithm
 ---
 Efficiency  is also called complexity.
 ## 时间复杂度 Time Complexity
