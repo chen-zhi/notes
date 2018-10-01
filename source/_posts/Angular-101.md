@@ -14,7 +14,7 @@ While a small application might have only one NgModule, most apps have many more
 ## NgModules and JavaScript modules
 The NgModule system is different from and unrelated to the JavaScript (ES2015) module system for managing collections of JavaScript objects. These are complementary module systems that you can use together to write your apps.
 
-In JavaScript **each file is a module** and all objects defined in the file belong to that module. The module declares some objects to be public by marking them with the export key word. Other JavaScript modules use import statements to access public objects from other modules.
+In JavaScript **each file is a module** and **all objects defined in the file belong to that module**. The module declares some objects to be public by marking them with the export key word. Other JavaScript modules use import statements to access public objects from other modules.
 
 # Components
 **Every component must be declared in exactly one NgModule.**
@@ -101,4 +101,41 @@ import { HeroesComponent }      from './heroes/heroes.component';
 const routes: Routes = [
   { path: 'heroes', component: HeroesComponent }
 ];
+```
+
+# HTTP
+The HttpClient in @angular/common/http offers a simplified client HTTP API for Angular applications.
+## HttpClientModule
+All HttpClient methods return an RxJS Observable of something.
+To make HttpClient available everywhere in the app:
+
+* open the root AppModule
+* import the HttpClientModule symbol from @angular/common/http
+
+```
+import { HttpClientModule }    from '@angular/common/http';
+```
+* add it to the @NgModule.imports array
+
+## RxJS and Observables
+
+Every observable, just like every array, can be transformed using functions you may have already encountered.
+
+Array:
+```
+[1, 2, 3, 4, 5]
+.map(x => x * 2)
+.filter(x => x > 5)
+.forEach(x => console.log(x)); // 6, 8, 10
+```
+Observable:
+```
+import { from } from 'rxjs';
+import { filter, map } from 'rxjs/operators';
+
+from([1, 2, 3, 4, 5]).pipe(
+map(x => x * 2),
+filter(x => x > 5)
+).subscribe(x => console.log(x)); // 6, 8, 10
+109
 ```

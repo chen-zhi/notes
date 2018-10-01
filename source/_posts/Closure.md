@@ -1,5 +1,5 @@
 ---
-title: Closure
-date: 2018-09-30 23:38:49
+title: Closure in JavaScript
+date: 2017-08-02 23:38:49
 tags: JavaScript
 ---

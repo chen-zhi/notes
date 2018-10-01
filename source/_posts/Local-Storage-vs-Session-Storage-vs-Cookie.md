@@ -1,6 +1,6 @@
 ---
 title: Local Storage vs Session Storage vs Cookie
-date: 2018-09-28 20:19:26
+date: 2017-10-28 20:19:26
 tags: Others
 ---
 ## LocalStorage

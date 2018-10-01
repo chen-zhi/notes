@@ -1,6 +1,6 @@
 ---
 title: Merging vs Rebasing in git
-date: 2018-09-28 14:17:15
+date: 2017-09-28 14:17:15
 tags: Others
 ---
 ## Overview

@@ -1,6 +1,6 @@
 ---
 title: ES6
-date: 2018-09-26 14:27:39
+date: 2017-07-26 14:27:39
 tags: JavaScript
 ---
 
